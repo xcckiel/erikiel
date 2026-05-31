@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Little Corner 💜</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
+body{
+background:linear-gradient(135deg,#f3e8ff,#ddd6fe,#c4b5fd,#a78bfa);
+color:#333;overflow-x:hidden;
+}
+body::before{
+content:"";position:fixed;top:10px;left:10px;right:10px;bottom:10px;
+border:3px solid rgba(255,255,255,.6);border-radius:25px;
+pointer-events:none;z-index:9999;
+}
+header{
+min-height:100vh;display:flex;flex-direction:column;
+justify-content:center;align-items:center;text-align:center;padding:20px;
+}
+h1{font-size:3rem;color:white;text-shadow:0 4px 15px rgba(0,0,0,.15)}
+.subtitle{color:white;margin-top:10px}
+.counter{
+margin-top:20px;background:rgba(255,255,255,.8);
+padding:15px 25px;border-radius:20px;font-weight:bold;
+}
+section{padding:60px 10%}
+.title{text-align:center;color:white;margin-bottom:25px}
+.card{
+background:rgba(255,255,255,.8);
+padding:25px;border-radius:20px;
+box-shadow:0 10px 30px rgba(0,0,0,.1);
+line-height:1.8;
+}
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+}
+.photo-frame{
+background:white;
+padding:12px 12px 25px;
+border-radius:15px;
+box-shadow:0 15px 30px rgba(0,0,0,.15);
+text-align:center;
+transition:.3s;
+}
+.photo-frame:hover{
+transform:translateY(-8px) rotate(2deg);
+}
+.photo-frame img{
+width:100%;
+height:260px;
+object-fit:cover;
+border-radius:10px;
+}
+.photo-frame p{margin-top:10px;font-weight:bold}
+.timeline-item{
+background:white;
+padding:20px;
+border-radius:15px;
+margin:15px 0;
+}
+button{
+padding:12px 20px;border:none;border-radius:30px;
+cursor:pointer;background:#7c3aed;color:white;
+}
+footer{text-align:center;padding:30px;color:white}
+.petal{
+position:fixed;
+font-size:22px;
+animation:fall 12s linear infinite;
+pointer-events:none;
+}
+@keyframes fall{
+0%{transform:translateY(-100px)}
+100%{transform:translateY(110vh)}
+}
+</style>
+</head>
+<body>
+
+<div class="petal" style="left:10%">🌸</div>
+<div class="petal" style="left:35%;animation-delay:2s">💜</div>
+<div class="petal" style="left:60%;animation-delay:4s">🌷</div>
+<div class="petal" style="left:85%;animation-delay:6s">💕</div>
+
+<header>
+<h1>💌 Our Little Corner</h1>
+<p class="subtitle">For Baby Dragon 🐉💜</p>
+
+<div class="counter">
+Together for <span id="days"></span> days ❤️
+</div>
+</header>
+
+<section>
+<h2 class="title">🌷 How It Started 🌷</h2>
+<div class="card">
+Our story started on January 13 with a simple chat.
+What began as a conversation slowly became one of the best parts of my day.
+
+Then on April 1, everything changed when you answered me.
+
+Since then, every notification, every laugh, and every call has become a memory worth keeping.
+
+My favorite thing about you will always be your eyes. 💜
+</div>
+</section>
+
+<section>
+<h2 class="title">📸 Baby Dragon Archive 📸</h2>
+
+<div class="gallery">
+<div class="photo-frame">
+<img src="photo1.jpg">
+<p>🌸 Pretty Girl Alert</p>
+</div>
+
+<div class="photo-frame">
+<img src="photo2.jpg">
+<p>💜 My Favorite Person</p>
+</div>
+
+<div class="photo-frame">
+<img src="photo3.jpg">
+<p>✨ Core Memory</p>
+</div>
+
+<div class="photo-frame">
+<img src="photo4.jpg">
+<p>🐉 Baby Dragon</p>
+</div>
+</div>
+</section>
+
+<section>
+<h2 class="title">🗓️ Our Journey 🗓️</h2>
+
+<div class="timeline-item">💬 January 13 — First Chat</div>
+<div class="timeline-item">❤️ April 1 — She Answered Me</div>
+<div class="timeline-item">📞 First Call — A Core Memory</div>
+<div class="timeline-item">✨ Today — Still Making Memories</div>
+
+</section>
+
+<section>
+<h2 class="title">💌 Open When You Need It 💌</h2>
+
+<div class="card">
+Hi Baby Dragon,
+
+Thank you for every conversation, every reel, every call, and every day you've stayed.
+
+Even though we're far apart, you've become one of the most important parts of my life.
+
+Your eyes are still my favorite.
+
+I love you. 💜
+
+— From your favorite nerd
+</div>
+</section>
+
+<section>
+<h2 class="title">💘 Love Meter 💘</h2>
+
+<div class="card" style="text-align:center">
+<button onclick="loveMeter()">Check Love Level 💜</button>
+<h2 id="loveResult" style="margin-top:15px"></h2>
+</div>
+</section>
+
+<footer>
+🌷 Thanks for being part of my story, Baby Dragon 💜
+</footer>
+
+<script>
+const startDate = new Date("2026-01-13");
+
+function updateCounter(){
+const today = new Date();
+const diff = today - startDate;
+const days = Math.floor(diff/(1000*60*60*24));
+document.getElementById("days").innerText = days;
+}
+updateCounter();
+
+function loveMeter(){
+const messages=[
+"100% Soulmates 💜",
+"999% Meant To Be 🌷",
+"Infinite Love ♾️💖",
+"Distance Cannot Stop This ❤️",
+"Baby Dragon + You Forever 🐉💜"
+];
+document.getElementById("loveResult").innerText =
+messages[Math.floor(Math.random()*messages.length)];
+}
+
+let clicks=0;
+document.querySelector("h1").addEventListener("click",()=>{
+clicks++;
+if(clicks===7){
+alert("🐉💜\n\nHi Baby Dragon,\n\nThank you for every conversation, every reel, every call, and every day you've stayed.\n\nYour eyes are still my favorite.\n\nI love you.");
+clicks=0;
+}
+});
+</script>
+
+</body>
+</html>
