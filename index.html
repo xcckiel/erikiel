@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Journey ❤️</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background: linear-gradient(135deg,#ffdde1,#ee9ca7);
+    color:#333;
+    overflow-x:hidden;
+}
+
+header{
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:20px;
+}
+
+h1{
+    font-size:4rem;
+    color:white;
+    text-shadow:2px 2px 10px rgba(0,0,0,.2);
+}
+
+.subtitle{
+    color:white;
+    font-size:1.2rem;
+    margin-top:10px;
+}
+
+.counter{
+    margin-top:25px;
+    background:white;
+    padding:15px 25px;
+    border-radius:20px;
+    font-weight:bold;
+    box-shadow:0 10px 25px rgba(0,0,0,.1);
+}
+
+section{
+    padding:80px 10%;
+}
+
+.title{
+    text-align:center;
+    margin-bottom:40px;
+    font-size:2.5rem;
+    color:white;
+}
+
+.story{
+    background:white;
+    padding:30px;
+    border-radius:20px;
+    line-height:1.8;
+    box-shadow:0 10px 20px rgba(0,0,0,.1);
+}
+
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.gallery img{
+    width:100%;
+    height:300px;
+    object-fit:cover;
+    border-radius:20px;
+    transition:.3s;
+}
+
+.gallery img:hover{
+    transform:scale(1.05);
+}
+
+.timeline{
+    position:relative;
+    max-width:800px;
+    margin:auto;
+}
+
+.timeline-item{
+    background:white;
+    margin:20px 0;
+    padding:20px;
+    border-radius:15px;
+}
+
+.love-letter{
+    background:white;
+    padding:30px;
+    border-radius:20px;
+    max-width:800px;
+    margin:auto;
+    line-height:1.8;
+}
+
+.surprise-btn{
+    display:block;
+    margin:40px auto;
+    padding:15px 30px;
+    border:none;
+    border-radius:50px;
+    background:#ff4f81;
+    color:white;
+    font-size:1.1rem;
+    cursor:pointer;
+}
+
+.popup{
+    position:fixed;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    background:white;
+    padding:30px;
+    border-radius:20px;
+    text-align:center;
+    display:none;
+    z-index:999;
+    box-shadow:0 20px 40px rgba(0,0,0,.2);
+}
+
+.heart{
+    position:fixed;
+    color:red;
+    font-size:20px;
+    animation:float 4s linear forwards;
+    pointer-events:none;
+}
+
+@keyframes float{
+    0%{
+        transform:translateY(0);
+        opacity:1;
+    }
+    100%{
+        transform:translateY(-200px);
+        opacity:0;
+    }
+}
+
+footer{
+    text-align:center;
+    padding:30px;
+    color:white;
+}
+</style>
+</head>
+<body>
+
+<header>
+    <h1>❤️ Angels & Her ❤️</h1>
+    <p class="subtitle">Every moment with you is my favorite memory.</p>
+
+    <div class="counter">
+        Together for <span id="days"></span> days ❤️
+    </div>
+</header>
+
+<section>
+    <h2 class="title">Our Story</h2>
+    <div class="story">
+        Replace this text with your own story.
+        Talk about how you met, your first conversations,
+        funny moments, and everything that made your relationship special.
+    </div>
+</section>
+
+<section>
+    <h2 class="title">Our Memories 📸</h2>
+
+    <div class="gallery">
+        <img src="photo1.jpg">
+        <img src="photo2.jpg">
+        <img src="photo3.jpg">
+        <img src="photo4.jpg">
+    </div>
+</section>
+
+<section>
+    <h2 class="title">Our Journey 🗓️</h2>
+
+    <div class="timeline">
+        <div class="timeline-item">
+            <h3>First Chat</h3>
+            <p>Your story here...</p>
+        </div>
+
+        <div class="timeline-item">
+            <h3>First Call</h3>
+            <p>Your story here...</p>
+        </div>
+
+        <div class="timeline-item">
+            <h3>First Date</h3>
+            <p>Your story here...</p>
+        </div>
+
+        <div class="timeline-item">
+            <h3>First Monthsary</h3>
+            <p>Your story here...</p>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h2 class="title">A Letter For You 💌</h2>
+
+    <div class="love-letter">
+        My love,
+
+        Thank you for staying with me through every moment.
+        No matter what happens, you'll always be one of the
+        best things that ever happened to me.
+
+        I love you. ❤️
+    </div>
+</section>
+
+<button class="surprise-btn" onclick="showSurprise()">
+    🎁 Open Surprise
+</button>
+
+<div class="popup" id="popup">
+    <h2>❤️ Surprise ❤️</h2>
+    <p>You are my favorite person in the entire world.</p>
+    <br>
+    <button onclick="closeSurprise()">Close</button>
+</div>
+
+<footer>
+    Made with ❤️ by Angels
+</footer>
+
+<script>
+const startDate = new Date("2025-01-15");
+
+function updateCounter(){
+    const today = new Date();
+    const diff = today - startDate;
+    const days = Math.floor(diff / (1000*60*60*24));
+    document.getElementById("days").innerText = days;
+}
+
+updateCounter();
+
+function showSurprise(){
+    document.getElementById("popup").style.display="block";
+}
+
+function closeSurprise(){
+    document.getElementById("popup").style.display="none";
+}
+
+document.addEventListener("click",function(e){
+    let heart = document.createElement("div");
+    heart.className="heart";
+    heart.innerHTML="❤️";
+
+    heart.style.left=e.clientX+"px";
+    heart.style.top=e.clientY+"px";
+
+    document.body.appendChild(heart);
+
+    setTimeout(()=>{
+        heart.remove();
+    },4000);
+});
+</script>
+
+</body>
+</html>
