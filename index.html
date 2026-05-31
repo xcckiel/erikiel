@@ -171,11 +171,41 @@ HAII BABYYY KO HAPPY 3RD MONTHSARY PO SATIN DALAWA
 <h2 id="loveResult" style="margin-top:15px"></h2>
 </div>
 </section>
+  
+<section>
+<h2 class="title">🎵 Our Song</h2>
 
+<div class="card" style="text-align:center">
+<h3>Glue Song</h3>
+<p>beabadoobee</p>
+
+<button onclick="toggleMusic()">
+🎵 Play / Pause
+</button>
+
+<audio id="bgMusic" loop>
+<source src="song.mp3" type="audio/mpeg">
+</audio>
+
+</div>
+</section>
+  
 <footer>
 🌷 Thanks for being part of my story, babyy ko 
 </footer>
+function toggleMusic(){
 
+const music =
+document.getElementById("bgMusic");
+
+if(music.paused){
+music.play();
+}
+else{
+music.pause();
+}
+
+}
 <script>
 const startDate = new Date("2026-01-13");
 
