@@ -7,8 +7,15 @@
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
 body{
-background:linear-gradient(135deg,#f3e8ff,#ddd6fe,#c4b5fd,#a78bfa);
-color:#333;overflow-x:hidden;
+background:linear-gradient(
+135deg,
+#0f0f23,
+#2e1065,
+#3b0764,
+#4c1d95
+);
+color:white;
+overflow-x:hidden;
 }
 body::before{
 content:"";position:fixed;top:10px;left:10px;right:10px;bottom:10px;
@@ -28,7 +35,10 @@ padding:15px 25px;border-radius:20px;font-weight:bold;
 section{padding:60px 10%}
 .title{text-align:center;color:white;margin-bottom:25px}
 .card{
-background:rgba(255,255,255,.8);
+background:rgba(255,255,255,.12);
+backdrop-filter:blur(15px);
+color:white;
+border:1px solid rgba(255,255,255,.2);
 padding:25px;border-radius:20px;
 box-shadow:0 10px 30px rgba(0,0,0,.1);
 line-height:1.8;
@@ -57,7 +67,9 @@ border-radius:10px;
 }
 .photo-frame p{margin-top:10px;font-weight:bold}
 .timeline-item{
-background:white;
+background:rgba(255,255,255,.12);
+color:white;
+border:1px solid rgba(255,255,255,.2);
 padding:20px;
 border-radius:15px;
 margin:15px 0;
@@ -88,60 +100,54 @@ pointer-events:none;
 
 <header>
 <h1>💌 Our Little Corner</h1>
-<p class="subtitle">For Baby Dragon 🐉💜</p>
+<p class="subtitle">Erika Dee Cagalitan 🦖🎀</p>
 
 <div class="counter">
-Together for <span id="days"></span> days ❤️
+Together for <span id="days"></span> days 
 </div>
 </header>
 
 <section>
 <h2 class="title">🌷 How It Started 🌷</h2>
 <div class="card">
-Our story started on January 13 with a simple chat.
-What began as a conversation slowly became one of the best parts of my day.
-
-Then on April 1, everything changed when you answered me.
-
-Since then, every notification, every laugh, and every call has become a memory worth keeping.
-
-My favorite thing about you will always be your eyes. 💜
+It all started dun sa litmatch hehe i was scrolling till nakita ko ikaw and then i saw sa bio mo
+  Daniel ceasar listener please so i said ako to aa and then nag chat ako sayo hehe
 </div>
 </section>
 
 <section>
-<h2 class="title">📸 Baby Dragon Archive 📸</h2>
+<h2 class="title">📸 pics ni erikaa 📸</h2>
 
 <div class="gallery">
 <div class="photo-frame">
-<img src="photo1.jpg">
+<img src="Messenger_creation_E9CBD8DA-AA77-4602-AA63-43AA795EBE73.jpeg">
 <p>🌸 Pretty Girl Alert</p>
 </div>
 
 <div class="photo-frame">
-<img src="photo2.jpg">
+<img src="Messenger_creation_93665152-FE91-4070-ABFE-425D600831FE.jpeg">
 <p>💜 My Favorite Person</p>
 </div>
 
 <div class="photo-frame">
-<img src="photo3.jpg">
+<img src="Messenger_creation_5836A655-F0DE-43F2-A826-1819E2FED79E.jpeg">
 <p>✨ Core Memory</p>
 </div>
 
 <div class="photo-frame">
-<img src="photo4.jpg">
+<img src="Messenger_creation_2E27D27A-39BC-4D38-AC15-27BB9EBF00F0.jpeg">
 <p>🐉 Baby Dragon</p>
 </div>
 </div>
 </section>
 
 <section>
-<h2 class="title">🗓️ Our Journey 🗓️</h2>
+<h2 class="title"> Our Journey </h2>
 
-<div class="timeline-item">💬 January 13 — First Chat</div>
-<div class="timeline-item">❤️ April 1 — She Answered Me</div>
-<div class="timeline-item">📞 First Call — A Core Memory</div>
-<div class="timeline-item">✨ Today — Still Making Memories</div>
+<div class="timeline-item"> January 13 — First Chat</div>
+<div class="timeline-item"> April 1 — She Answered Me</div>
+<div class="timeline-item"> First Call — A Core Memory</div>
+<div class="timeline-item"> Today — Still Making Memories</div>
 
 </section>
 
@@ -149,17 +155,11 @@ My favorite thing about you will always be your eyes. 💜
 <h2 class="title">💌 Open When You Need It 💌</h2>
 
 <div class="card">
-Hi Baby Dragon,
-
-Thank you for every conversation, every reel, every call, and every day you've stayed.
-
-Even though we're far apart, you've become one of the most important parts of my life.
-
-Your eyes are still my favorite.
-
-I love you. 💜
-
-— From your favorite nerd
+HAII BABYYY KO HAPPY 3RD MONTHSARY PO SATIN DALAWA
+  HERE WE ARE AGAIN OHH 3 MONTHS NA STILL COUNTING
+  SALAMAT SA ALL BABYYY KOO OMGG I'M SOO GREATFUL SA MGA EFFORTS MO BABYY
+  VERY PROUD PO AKO SAYOO ALWAYSS IK BAHY SOMETIMES I MAY NOT SHOW IT
+  PERO I LOVEE YOUU WITH ALL OF MY HEART BABYY FOREVER PO MWAA🎀🦖💖💞
 </div>
 </section>
 
@@ -173,7 +173,7 @@ I love you. 💜
 </section>
 
 <footer>
-🌷 Thanks for being part of my story, Baby Dragon 💜
+🌷 Thanks for being part of my story, babyy ko 
 </footer>
 
 <script>
@@ -193,7 +193,7 @@ const messages=[
 "999% Meant To Be 🌷",
 "Infinite Love ♾️💖",
 "Distance Cannot Stop This ❤️",
-"Baby Dragon + You Forever 🐉💜"
+"MWAAA 🐉💜"
 ];
 document.getElementById("loveResult").innerText =
 messages[Math.floor(Math.random()*messages.length)];
